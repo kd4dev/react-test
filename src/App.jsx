@@ -24,17 +24,18 @@ const removeFromQueue = (id) => {
   setQueue((prev) => prev.filter((c) => c.id !== id));
 };
 
-return (
-  <div className="min-h-screen bg-black px-12 pt-10">
+  return (
+    <div className="min-h-screen bg-black px-6 sm:px-8 md:px-12 pt-10">
       <Header />
 
-      <div className="flex items-start gap-10">
+      {/* Stack on small screens, side-by-side on md and up */}
+      <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10">
         <QueueForm onAdd={addToQueue} />
         <QueueDisplay
           queue={queue}
           onUpdateStatus={updateStatus}
           onRemove={removeFromQueue}
-          />
+        />
       </div>
     </div>
   );

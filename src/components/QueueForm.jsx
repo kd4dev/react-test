@@ -16,7 +16,7 @@ export default function QueueForm({ onAdd }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl bg-zinc-900 p-6 shadow-xl w-[360px]"
+      className="rounded-2xl bg-zinc-900 p-6 shadow-xl w-full max-w-md"
     >
       <h2 className="mb-5 text-xl font-semibold text-indigo-400">
         Add to Queue

@@ -2,7 +2,7 @@ import QueueItem from "./QueueItem";
 
 export default function QueueDisplay({ queue, onUpdateStatus, onRemove }) {
   return (
-    <div className="flex-1 rounded-2xl bg-zinc-900 p-6 shadow-xl">
+    <div className="flex-1 w-full rounded-2xl bg-zinc-900 p-6 shadow-xl">
       <h2 className="mb-6 text-xl font-semibold text-white">Current Queue</h2>
 
       {queue.length === 0 ? (

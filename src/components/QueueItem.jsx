@@ -21,7 +21,7 @@ else {
 }
 
   return (
-    <div className="flex items-center justify-between rounded-xl bg-zinc-800 p-5">
+    <div className="flex flex-col sm:flex-row sm:items-center justify-between rounded-xl bg-zinc-800 p-5">
       <div>
         <h3 className="text-lg font-semibold text-white">{userName}</h3>
         <p className="text-sm text-zinc-400">Service: {service}</p>
@@ -31,11 +31,11 @@ else {
         </span>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 mt-4 sm:mt-0">
         {status !== "completed" && (
           <button
             onClick={() => onUpdateStatus(id, nextStatus)}
-            className={`rounded-md px-4 py-2 text-sm ${buttonColor}`}
+            className={`rounded-md px-4 py-2 text-sm ${buttonColor}`} 
           >
             {status === "waiting" ? "Serve" : "Complete"}
           </button>
